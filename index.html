@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>AGRO HOLDING — Agricultural Group</title>
-  <meta name="description" content="Full-cycle agricultural holding since 1997. 30,000 ha, crop production, livestock, processing. A+ rating." />
-  <meta name="keywords" content="agricultural holding, crop production, livestock, farming, agribusiness" />
-  <meta property="og:title" content="AGRO HOLDING — Agricultural Group" />
-  <meta property="og:description" content="Full-cycle agricultural group since 1997. 30,000 ha, 850 employees." />
+  <title>AGRO HOLDING — Agricultural Enterprise</title>
+  <meta name="description" content="AGRO HOLDING — full-cycle agricultural group since 1997. Crop production, livestock, processing. 30,000 ha, 850+ employees." />
+  <meta name="keywords" content="agro holding, agricultural enterprise, crop production, livestock, food processing, agribusiness, farming" />
+  <meta property="og:title" content="AGRO HOLDING — Agricultural Enterprise" />
+  <meta property="og:description" content="Full-cycle agricultural group since 1997. 30,000 ha, 850+ employees." />
   <meta property="og:image" content="images/logo.svg" />
-  <meta property="og:url" content="https://agroholding.ru" />
+  <meta property="og:url" content="https://unityspirit.github.io/agro-holding-en/" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <link rel="icon" type="image/png" href="images/logo.svg" />
@@ -17,131 +17,227 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <div id="loader">
     <div class="loader-inner">
       <img src="images/logo.svg" alt="AGRO HOLDING" style="width:64px;height:64px;margin-bottom:1rem;" />
       <div class="loader-logo">AGRO<span class="accent-green">HOLDING</span></div>
       <div class="progress-track"><div id="progress-bar"></div></div>
+      <p class="loader-pct" id="loader-pct">0%</p>
       <div class="loader-text">Loading...</div>
     </div>
   </div>
+
   <canvas id="gl-canvas"></canvas>
   <canvas id="particle-canvas"></canvas>
   <div class="grain-overlay"></div>
+
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo"><img src="images/logo.svg" alt="AGRO HOLDING" onerror="this.style.display='none'" /><span>AGRO<span class="accent-green">HOLDING</span></span></a>
+      <a href="#hero" class="nav-logo">
+        <img src="images/logo.svg" alt="AGRO HOLDING" onerror="this.style.display='none'" />
+        <span>AGRO<span class="accent-green">HOLDING</span></span>
+      </a>
       <ul class="nav-links">
-        <li><a href="#services" class="nav-link">Directions</a></li>
+        <li><a href="#services" class="nav-link">Divisions</a></li>
         <li><a href="#portfolio" class="nav-link">Results</a></li>
         <li><a href="#process" class="nav-link">Cycle</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#contact" class="nav-link">Partnership</a></li>
       </ul>
-      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+
   <div class="nav-drawer" id="nav-drawer" hidden>
     <div class="drawer-backdrop" id="drawer-backdrop"></div>
     <div class="drawer-panel">
-      <button class="drawer-close" id="drawer-close">✕</button>
+      <button class="drawer-close" id="drawer-close" aria-label="Close">✕</button>
       <ul>
-        <li><a href="#services" class="drawer-link">Directions</a></li>
+        <li><a href="#services" class="drawer-link">Divisions</a></li>
         <li><a href="#portfolio" class="drawer-link">Results</a></li>
         <li><a href="#process" class="drawer-link">Cycle</a></li>
         <li><a href="#about" class="drawer-link">About</a></li>
         <li><a href="#contact" class="drawer-link">Partnership</a></li>
       </ul>
+      <div class="drawer-footer" style="margin-top:auto;padding-top:2rem;border-top:1px solid rgba(93,138,44,0.2);font-size:0.85rem;color:rgba(255,255,255,0.6);">
+        <p style="margin-bottom:0.5rem;">contact@unityspiritpartners.com</p>
+        <p>unityspiritpartners.com</p>
+      </div>
     </div>
   </div>
-  <div id="ui-layer"><div class="stage">
-    <section class="page is-active" data-index="0" id="hero">
-      <div class="hero-content">
-        <div class="hero-badge reveal-3d">EST. 1997</div>
-        <h1 class="hero-title reveal-3d">AGRO<br/><span class="accent-green">HOLDING</span></h1>
-        <p class="hero-subtitle reveal-3d">Next-generation agriculture</p>
-        <p class="hero-desc reveal-3d">Crop production, livestock, processing.<br/>From field to table.</p>
-        <div class="hero-btns reveal-3d">
-          <a href="#services" class="btn-primary">Our Products</a>
-          <a href="#contact" class="btn-outline">Partnership</a>
+
+  <div id="ui-layer">
+    <div class="stage">
+
+      <!-- SECTION 0: HERO -->
+      <section class="page is-active" data-index="0" id="hero">
+        <div class="hero-content">
+          <div class="hero-badge reveal-3d">SINCE 1997</div>
+          <h1 class="hero-title reveal-3d">AGRO<br/><span class="accent-green">HOLDING</span></h1>
+          <p class="hero-subtitle reveal-3d">Next-generation agriculture</p>
+          <p class="hero-desc reveal-3d">Crop production, livestock, processing.<br/>From field to table.</p>
+          <div class="hero-btns reveal-3d">
+            <a href="#services" class="btn-primary">Our Products</a>
+            <a href="#contact" class="btn-outline">Partnership</a>
+          </div>
+          <div class="hero-facts reveal-3d">
+            <div class="fact-item"><span class="fact-num">30,000</span><span class="fact-label">hectares</span></div>
+            <div class="fact-item"><span class="fact-num">850+</span><span class="fact-label">employees</span></div>
+            <div class="fact-item"><span class="fact-num">25 yrs</span><span class="fact-label">in the market</span></div>
+          </div>
         </div>
-        <div class="hero-facts reveal-3d">
-          <div class="fact-item"><span class="fact-num">30K</span><span class="fact-label">hectares</span></div>
-          <div class="fact-item"><span class="fact-num">850+</span><span class="fact-label">employees</span></div>
-          <div class="fact-item"><span class="fact-num">25 yr</span><span class="fact-label">on market</span></div>
-        </div>
-      </div>
-      <div class="scroll-hint reveal-3d"><span>↓</span></div>
-    </section>
-    <section class="page" data-index="1" id="services">
-      <div class="section-content">
-        <div class="section-header reveal-3d"><h2 class="section-title">DIRECTIONS</h2><p class="section-subtitle">Full agricultural cycle</p></div>
-        <div class="cards-grid reveal-3d">
-          <div class="card"><div class="card-icon">🌾</div><h3 class="card-title">Crop Production</h3><p class="card-text">Wheat, corn, sunflower — 30,000 ha of arable land</p></div>
-          <div class="card"><div class="card-icon">🐄</div><h3 class="card-title">Livestock</h3><p class="card-text">Meat and dairy cattle, large-scale breeding</p></div>
-          <div class="card"><div class="card-icon">🏗️</div><h3 class="card-title">Greenhouses</h3><p class="card-text">Hydroponics, vegetables and fruit year-round</p></div>
-          <div class="card"><div class="card-icon">🏭</div><h3 class="card-title">Processing</h3><p class="card-text">Grain, dairy, vegetable products under own brand</p></div>
-        </div>
-      </div>
-    </section>
-    <section class="page" data-index="2" id="portfolio">
-      <div class="section-content">
-        <div class="section-header reveal-3d"><h2 class="section-title">OUR RESULTS</h2><p class="section-subtitle">Numbers that speak for themselves</p></div>
-        <div class="results-grid reveal-3d">
-          <div class="result-card"><div class="result-num accent-gold">480,000</div><div class="result-label">tonnes of wheat — 2023 harvest</div></div>
-          <div class="result-card"><div class="result-num accent-green">12 ha</div><div class="result-label">hydroponic greenhouse complexes</div></div>
-          <div class="result-card"><div class="result-num accent-gold">2,400</div><div class="result-label">head of cattle</div></div>
-          <div class="result-card"><div class="result-num accent-green">8</div><div class="result-label">regional sales points</div></div>
-        </div>
-      </div>
-    </section>
-    <section class="page" data-index="3" id="process">
-      <div class="section-content">
-        <div class="section-header reveal-3d"><h2 class="section-title">FULL CYCLE</h2></div>
-        <div class="process-steps reveal-3d">
-          <div class="step"><div class="step-num">01</div><div class="step-icon">📊</div><h3 class="step-title">Soil Analysis</h3><p class="step-text">Full agrochemical analysis before sowing</p></div>
-          <div class="step-arrow">→</div>
-          <div class="step"><div class="step-num">02</div><div class="step-icon">🚜</div><h3 class="step-title">Planting</h3><p class="step-text">Precision farming, certified seeds</p></div>
-          <div class="step-arrow">→</div>
-          <div class="step"><div class="step-num">03</div><div class="step-icon">🌱</div><h3 class="step-title">Care</h3><p class="step-text">Precision irrigation and crop management</p></div>
-          <div class="step-arrow">→</div>
-          <div class="step"><div class="step-num">04</div><div class="step-icon">🏷️</div><h3 class="step-title">Harvest &amp; Sale</h3><p class="step-text">Own logistics and delivery chain</p></div>
-        </div>
-      </div>
-    </section>
-    <section class="page" data-index="4" id="about">
-      <div class="section-content">
-        <div class="section-header reveal-3d"><h2 class="section-title">THE HOLDING</h2><p class="section-subtitle">Agricultural group since 1997</p></div>
-        <div class="about-layout reveal-3d">
-          <div class="about-text">
-            <p>AGRO HOLDING is a full-cycle agricultural group combining crop production, livestock and processing under unified management.</p>
-            <p>Own equipment fleet, qualified specialists, quality control at every stage from soil to shelf.</p>
-            <div class="about-stats">
-              <div class="stat"><span class="stat-num accent-gold">25</span><span class="stat-label">years</span></div>
-              <div class="stat"><span class="stat-num accent-green">30K</span><span class="stat-label">hectares</span></div>
-              <div class="stat"><span class="stat-num accent-gold">850</span><span class="stat-label">employees</span></div>
-              <div class="stat"><span class="stat-num accent-green">A+</span><span class="stat-label">rating</span></div>
+        <div class="scroll-hint reveal-3d"><span>↓</span></div>
+      </section>
+
+      <!-- SECTION 1: DIVISIONS -->
+      <section class="page" data-index="1" id="services">
+        <div class="section-content">
+          <div class="section-header reveal-3d">
+            <h2 class="section-title">DIVISIONS</h2>
+            <p class="section-subtitle">Full agricultural cycle</p>
+          </div>
+          <div class="cards-grid reveal-3d">
+            <div class="card">
+              <div class="card-icon">🌾</div>
+              <h3 class="card-title">Crop Production</h3>
+              <p class="card-text">Wheat, corn, sunflower — 30,000 ha of arable land</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">🐄</div>
+              <h3 class="card-title">Livestock</h3>
+              <p class="card-text">Beef and dairy cattle operations</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">🏗️</div>
+              <h3 class="card-title">Greenhouses</h3>
+              <p class="card-text">Hydroponics, year-round vegetables and fruits</p>
+            </div>
+            <div class="card">
+              <div class="card-icon">🏭</div>
+              <h3 class="card-title">Processing</h3>
+              <p class="card-text">Grain, dairy, and vegetable products under our own brand</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="page" data-index="5" id="contact">
-      <div class="section-content">
-        <div class="section-header reveal-3d"><h2 class="section-title">PARTNERSHIP</h2><p class="section-subtitle">Working with wholesale buyers and dealers</p></div>
-        <div class="contact-layout reveal-3d">
-          <div class="contact-info">
-            <div class="contact-item"><span class="contact-icon">📞</span><a href="tel:+79054991618">+7 (905) 499-16-18</a></div>
-            <div class="contact-item"><span class="contact-icon">✉️</span><a href="mailto:team@globalplus.tech">partner@agroholding.ru</a></div>
-            <div class="contact-item"><span class="contact-icon">📍</span><span>Krasnodar, Polevaya St., 1</span></div>
-            <div class="contact-item"><span class="contact-icon">🕐</span><span>Mon–Fri: 8:00–18:00</span></div>
+      </section>
+
+      <!-- SECTION 2: RESULTS -->
+      <section class="page" data-index="2" id="portfolio">
+        <div class="section-content">
+          <div class="section-header reveal-3d">
+            <h2 class="section-title">OUR RESULTS</h2>
+            <p class="section-subtitle">Numbers you can trust</p>
           </div>
-          
+          <div class="results-grid reveal-3d">
+            <div class="result-card">
+              <div class="result-num accent-gold">480,000</div>
+              <div class="result-label">tons of wheat harvested in 2023</div>
+            </div>
+            <div class="result-card">
+              <div class="result-num accent-green">12 ha</div>
+              <div class="result-label">of hydroponic greenhouse complexes</div>
+            </div>
+            <div class="result-card">
+              <div class="result-num accent-gold">2,400</div>
+              <div class="result-label">head of cattle on farm</div>
+            </div>
+            <div class="result-card">
+              <div class="result-num accent-green">8</div>
+              <div class="result-label">regional sales locations</div>
+            </div>
+          </div>
         </div>
-        <footer class="site-footer"><p>© 2024 AGRO HOLDING. All rights reserved.</p></footer>
-      </div>
-    </section>
-  </div></div>
+      </section>
+
+      <!-- SECTION 3: FULL CYCLE -->
+      <section class="page" data-index="3" id="process">
+        <div class="section-content">
+          <div class="section-header reveal-3d">
+            <h2 class="section-title">FULL CYCLE</h2>
+          </div>
+          <div class="process-steps reveal-3d">
+            <div class="step">
+              <div class="step-num">01</div>
+              <div class="step-icon">📊</div>
+              <h3 class="step-title">Soil Analysis</h3>
+              <p class="step-text">Complete agrochemical testing before planting</p>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step">
+              <div class="step-num">02</div>
+              <div class="step-icon">🚜</div>
+              <h3 class="step-title">Sowing</h3>
+              <p class="step-text">Precision farming, certified seed varieties</p>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step">
+              <div class="step-num">03</div>
+              <div class="step-icon">🌱</div>
+              <h3 class="step-title">Care & Irrigation</h3>
+              <p class="step-text">Smart crop management and modern irrigation systems</p>
+            </div>
+            <div class="step-arrow">→</div>
+            <div class="step">
+              <div class="step-num">04</div>
+              <div class="step-icon">🏷️</div>
+              <h3 class="step-title">Harvest & Sales</h3>
+              <p class="step-text">In-house logistics and distribution</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: ABOUT -->
+      <section class="page" data-index="4" id="about">
+        <div class="section-content">
+          <div class="section-header reveal-3d">
+            <h2 class="section-title">ABOUT THE HOLDING</h2>
+            <p class="section-subtitle">Agricultural group since 1997</p>
+          </div>
+          <div class="about-layout reveal-3d">
+            <div class="about-text">
+              <p>AGRO HOLDING is a full-cycle agricultural group integrating crop production, livestock, and food processing under unified management.</p>
+              <p>Our own fleet of equipment, qualified specialists, and quality control at every stage of production.</p>
+              <div class="about-stats">
+                <div class="stat"><span class="stat-num accent-gold">25</span><span class="stat-label">years of operation</span></div>
+                <div class="stat"><span class="stat-num accent-green">30,000</span><span class="stat-label">ha of arable land</span></div>
+                <div class="stat"><span class="stat-num accent-gold">850</span><span class="stat-label">employees</span></div>
+                <div class="stat"><span class="stat-num accent-green">A+</span><span class="stat-label">rating</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: WANT A WEBSITE LIKE THIS? -->
+      <section class="page" data-index="5" id="contact">
+        <div class="section-content">
+          <div class="section-header reveal-3d">
+            <h2 class="section-title">WANT A WEBSITE LIKE THIS?</h2>
+            <p class="section-subtitle">Contact us — we'll build one for you</p>
+          </div>
+          <div class="contact-layout reveal-3d" style="grid-template-columns:1fr;max-width:600px;margin:0 auto;">
+            <div class="contact-info">
+              <div class="contact-item"><span class="contact-icon">✉️</span><a href="mailto:contact@unityspiritpartners.com">contact@unityspiritpartners.com</a></div>
+              <div class="contact-item"><span class="contact-icon">🌐</span><a href="https://unityspiritpartners.com" target="_blank">unityspiritpartners.com</a></div>
+            </div>
+            <div style="text-align:center;margin-top:1.5rem;">
+              <a href="https://unityspiritpartners.com/#page-4" class="btn btn-outline">BACK TO MAIN PAGE</a>
+            </div>
+          </div>
+          <footer class="site-footer">
+            <p>Sample site by Unity Spirit Partners</p>
+            <p>© 2024 AGRO HOLDING. All rights reserved.</p>
+          </footer>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
