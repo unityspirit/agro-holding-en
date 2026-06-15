@@ -1,4 +1,4 @@
-/* ===== AGRO HOLDING RU — STYLES ===== */
+﻿/* ===== AGRO HOLDING RU — STYLES ===== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@300;400;500&display=swap');
 
 :root {
@@ -87,7 +87,7 @@ body {
 .nav-logo img { height: 36px; mix-blend-mode: screen; }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-link {
-  color: rgba(255,255,255,0.8); text-decoration: none;
+  color: #ffffff; text-decoration: none;
   font-size: 0.85rem; letter-spacing: 0.1em;
   transition: color 0.3s; font-family: 'Montserrat', sans-serif; font-weight: 700;
   text-transform: uppercase;
@@ -212,7 +212,7 @@ body {
   text-shadow: var(--ts-dark);
 }
 .fact-label {
-  display: block; font-size: 0.75rem; color: rgba(255,255,255,0.7);
+  display: block; font-size: 0.75rem; color: #ffffff;
   text-shadow: var(--ts-dark); letter-spacing: 0.1em; text-transform: uppercase;
 }
 
@@ -279,7 +279,7 @@ body {
   color: #fff; text-shadow: var(--ts-dark); margin-bottom: 0.75rem;
   text-transform: uppercase; letter-spacing: 0.05em;
 }
-.card-text { font-size: 0.9rem; color: rgba(255,255,255,0.8); text-shadow: var(--ts-dark); line-height: 1.6; }
+.card-text { font-size: 0.9rem; color: #ffffff; text-shadow: var(--ts-dark); line-height: 1.6; }
 
 /* RESULTS */
 .results-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
@@ -295,7 +295,7 @@ body {
   font-size: clamp(2rem, 4vw, 3.5rem);
   text-shadow: var(--ts-dark); margin-bottom: 0.75rem;
 }
-.result-label { font-size: 0.85rem; color: rgba(255,255,255,0.8); text-shadow: var(--ts-dark); }
+.result-label { font-size: 0.85rem; color: #ffffff; text-shadow: var(--ts-dark); }
 
 /* PROCESS */
 .process-steps {
@@ -330,7 +330,7 @@ body {
 .about-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; margin-top: 2rem; }
 .stat { text-align: center; padding: 1rem; background: rgba(0,0,0,0.3); border-radius: 8px; border: 1px solid rgba(93,138,44,0.3); }
 .stat-num { display: block; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: clamp(1.5rem,3vw,2rem); text-shadow: var(--ts-dark); }
-.stat-label { display: block; font-size: 0.75rem; color: rgba(255,255,255,0.7); text-shadow: var(--ts-dark); letter-spacing: 0.1em; }
+.stat-label { display: block; font-size: 0.75rem; color: #ffffff; text-shadow: var(--ts-dark); letter-spacing: 0.1em; }
 
 /* CONTACT */
 .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
