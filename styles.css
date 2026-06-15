@@ -1,4 +1,4 @@
-﻿/* ===== AGRO HOLDING RU — STYLES ===== */
+/* ===== AGRO HOLDING RU — STYLES ===== */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@300;400;500&display=swap');
 
 :root {
@@ -9,7 +9,7 @@
   --bg: #050A03;
   --card-bg: rgba(0,0,0,0.40);
   --card-border: rgba(93,138,44,0.5);
-  --ts-dark: 1px 1px 0 rgba(0,0,0,1), -1px -1px 0 rgba(0,0,0,1), 1px -1px 0 rgba(0,0,0,1), -1px 1px 0 rgba(0,0,0,1), 0 0 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.7);
+  --ts-dark: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000, 1px 0 0 #000;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -64,7 +64,7 @@ body {
   background: linear-gradient(90deg, var(--green), var(--gold));
   transition: width 0.3s ease;
 }
-.loader-text { font-size: 0.8rem; color: rgba(255,255,255,0.5); letter-spacing: 0.2em; }
+.loader-text { font-size: 0.8rem; color: rgba(255,255,255,0.9); letter-spacing: 0.2em; }
 
 /* NAVBAR */
 .navbar {
@@ -84,7 +84,7 @@ body {
   font-family: 'Montserrat', sans-serif; font-weight: 800;
   font-size: clamp(1rem, 2vw, 1.3rem); letter-spacing: 0.05em;
 }
-.nav-logo img { height: 36px; mix-blend-mode: screen; }
+.nav-logo img { width: 36px; height: 36px; object-fit: contain; background-color: transparent; }
 .nav-links { display: flex; gap: 2rem; list-style: none; }
 .nav-link {
   color: #ffffff; text-decoration: none;
@@ -252,7 +252,7 @@ body {
 }
 .section-subtitle {
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-  color: rgba(255,255,255,0.75); text-shadow: var(--ts-dark);
+  color: rgba(255,255,255,0.9); text-shadow: var(--ts-dark);
 }
 
 /* CARDS */
@@ -305,7 +305,7 @@ body {
 .step { text-align: center; flex: 1; min-width: 160px; max-width: 220px; }
 .step-num {
   font-family: 'Montserrat', sans-serif; font-weight: 800;
-  font-size: 3rem; color: rgba(93,138,44,0.3);
+  font-size: 3rem; color: var(--green); opacity: 1;
   text-shadow: none; line-height: 1;
 }
 .step-icon { font-size: 2rem; margin: 0.5rem 0; }
@@ -314,7 +314,7 @@ body {
   font-size: 0.9rem; color: #fff; text-shadow: var(--ts-dark);
   text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;
 }
-.step-text { font-size: 0.82rem; color: rgba(255,255,255,0.75); text-shadow: var(--ts-dark); line-height: 1.5; }
+.step-text { font-size: 0.82rem; color: rgba(255,255,255,0.9); text-shadow: var(--ts-dark); line-height: 1.5; }
 .step-arrow {
   font-size: 2rem; color: var(--green); align-self: center;
   text-shadow: none; margin-top: -1rem;
@@ -352,7 +352,7 @@ body {
 .contact-form .btn-primary { border: none; font-family: 'Montserrat', sans-serif; }
 
 .site-footer { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
-.site-footer p { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-shadow: none; }
+.site-footer p { font-size: 0.8rem; color: rgba(255,255,255,0.9); text-shadow: none; }
 
 /* MOBILE */
 @media (max-width: 768px) {
