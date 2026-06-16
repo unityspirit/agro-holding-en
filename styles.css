@@ -171,10 +171,7 @@ body {
 
 /* ACCENT */
 .accent-green {
-  color: var(--green);
-  background: linear-gradient(135deg, var(--green), #8BC34A);
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text; text-shadow: none; filter: none;
+  color: #8BC34A; text-shadow: var(--ts-dark);
 }
 .accent-gold {
   color: var(--gold); text-shadow: var(--ts-dark);
@@ -317,8 +314,8 @@ body {
 .step { text-align: center; flex: 1; min-width: 160px; max-width: 220px; }
 .step-num {
   font-family: 'Montserrat', sans-serif; font-weight: 800;
-  font-size: 3rem; color: rgba(93,138,44,0.3);
-  text-shadow: none; line-height: 1;
+  font-size: 3rem; color: #8BC34A;
+  text-shadow: var(--ts-dark); line-height: 1;
 }
 .step-icon { font-size: 2rem; margin: 0.5rem 0; }
 .step-title {
