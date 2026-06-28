@@ -1,4 +1,4 @@
-// === AGRO HOLDING RU — CINEMATIC SCROLL ENGINE ===
+﻿// === AGRO HOLDING RU — CINEMATIC SCROLL ENGINE ===
 const TOTAL_FRAMES = 419;     // Agro desktop frames
 const PAGE_COUNT   = 6;
 const LERP         = 0.02;
@@ -25,6 +25,8 @@ resize();
 const frames = new Array(TOTAL_FRAMES);
 let loadedCount = 0;
 let isReady = false;
+let preloaderDismissed = false;
+const PRELOADER_THRESHOLD = 15;
 
 function frameName(i) {
   return `${FRAME_DIR}/frame_${String(i + 1).padStart(6, '0')}.webp`;
@@ -40,16 +42,29 @@ async function loadAll() {
         img.onload = img.onerror = () => {
           frames[i] = img;
           loadedCount++;
-          const pct = Math.round(loadedCount / TOTAL_FRAMES * 100);
-          const bar = document.getElementById('progress-bar');
-          if (bar) bar.style.width = pct + '%';
           if (loadedCount === 1) { isReady = true; startAnim(); }
-          if (loadedCount === TOTAL_FRAMES) {
-            const loader = document.getElementById('loader');
-            if (loader) {
-              loader.style.transition = 'opacity 0.8s';
-              loader.style.opacity = '0';
-              setTimeout(() => loader.style.display = 'none', 800);
+          const realPct = Math.round((loadedCount / TOTAL_FRAMES) * 100);
+          if (!preloaderDismissed) {
+            const visualPct = Math.min(Math.round((realPct / PRELOADER_THRESHOLD) * 100), 100);
+            const bar = document.getElementById('progress-bar');
+            if (bar) bar.style.width = visualPct + '%';
+            if (realPct >= PRELOADER_THRESHOLD) {
+              preloaderDismissed = true;
+              const loader = document.getElementById('loader');
+              if (loader) { loader.style.transition = 'opacity 0.8s'; loader.style.opacity = '0'; setTimeout(() => loader.style.display = 'none', 800); }
+              const siteBarEl = document.createElement('div');
+              siteBarEl.id = 'siteLoadingBar';
+              siteBarEl.innerHTML = '<div class="slb-track"><div class="slb-fill" id="slbFill"></div></div><span class="slb-text" id="siteLoadingText">Loading video 0%</span>';
+              document.body.appendChild(siteBarEl);
+            }
+          } else {
+            const slb = document.getElementById('slbFill');
+            const txt = document.getElementById('siteLoadingText');
+            if (slb) slb.style.width = realPct + '%';
+            if (txt) txt.textContent = 'Loading video ' + realPct + '%';
+            if (realPct >= 100) {
+              const sbar = document.getElementById('siteLoadingBar');
+              if (sbar) { sbar.classList.add('done'); setTimeout(() => sbar.remove(), 800); }
             }
           }
           resolve();
